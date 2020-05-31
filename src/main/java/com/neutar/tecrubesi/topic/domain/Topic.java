@@ -1,4 +1,4 @@
-package om.neutar.tecrubesi.topic.domain;
+package com.neutar.tecrubesi.topic.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

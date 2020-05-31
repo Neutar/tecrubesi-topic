@@ -1,4 +1,4 @@
-package om.neutar.tecrubesi.topic.domain;
+package com.neutar.tecrubesi.topic.domain;
 
 public enum VoteType {
     UPVOTE,

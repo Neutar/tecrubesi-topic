@@ -1,11 +1,13 @@
-package om.neutar.tecrubesi.topic.domain;
+package com.neutar.tecrubesi.topic.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
@@ -14,16 +16,12 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Vote {
-
+public class TopicTag {
     @Id
     @GeneratedValue
     private UUID id;
 
-    @NotNull(message = "User id is mandatory")
-    private UUID userId;
+    @NotNull(message = "Name is mandatory")
+    private String name;
 
-    @NotNull(message = "Vote type is mandatory")
-    @Enumerated(EnumType.STRING)
-    private VoteType voteType;
 }

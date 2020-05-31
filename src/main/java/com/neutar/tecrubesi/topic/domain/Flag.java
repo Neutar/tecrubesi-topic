@@ -1,4 +1,4 @@
-package om.neutar.tecrubesi.topic.domain;
+package com.neutar.tecrubesi.topic.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,12 +16,15 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TopicTag {
+public class Flag {
+
     @Id
     @GeneratedValue
     private UUID id;
 
-    @NotNull(message = "Name is mandatory")
-    private String name;
+    @NotNull(message = "User id is mandatory")
+    private UUID userId;
 
+    @NotNull(message = "Reason is mandatory")
+    private String reason;
 }
