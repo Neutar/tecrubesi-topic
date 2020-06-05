@@ -21,9 +21,15 @@ public class Comment {
     @GeneratedValue
     private UUID id;
 
-    @NotBlank
+    @NotBlank(message = "Message is mandatory")
     private String message;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Flag> flag = new ArrayList<>();
+    @JoinColumn(name = "comment_id")
+    @Builder.Default
+    private List<Flag> flagList = new ArrayList<>();
+
+    void addFlag(Flag flag) {
+        flagList.add(flag);
+    }
 }

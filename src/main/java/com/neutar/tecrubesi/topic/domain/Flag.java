@@ -27,4 +27,5 @@ public class Flag {
 
     @NotNull(message = "Reason is mandatory")
     private String reason;
+
 }
