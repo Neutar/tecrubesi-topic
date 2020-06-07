@@ -1,0 +1,8 @@
+version: '3.2'
+services:
+  tecrubesi-topic:
+    image: "tecrubesi-topic:latest"
+    ports:
+      - "8081:8080"
+    environment:
+      - DB_HOST=postgres_db
