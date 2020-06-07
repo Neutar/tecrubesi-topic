@@ -1,6 +1,14 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8081}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
 spring:
+  application:
+    name: tecrubesi-topic
   jpa:
     database: POSTGRESQL
     show-sql: true
